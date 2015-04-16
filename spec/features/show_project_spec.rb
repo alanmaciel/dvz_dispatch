@@ -22,7 +22,7 @@ describe "Viewing project" do
                               next_release_deployer:"Oscar Wild")
 
     # Act
-    visit "http://example.com/projects/#{project1.id}"
+    visit project_url(project1)
     # Assert
     expect(page).to have_text(project1.name)
     expect(page).to have_text(project1.short_name)
