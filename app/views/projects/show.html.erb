@@ -1,0 +1,81 @@
+<article>
+  <header>
+    <h1><%= @project.name %>(<%= @project.short_name %>)</h1>
+    <h2>[<%= @project.code_name %>]</h2>
+  </header>
+  <p>
+    <%= @project.description %>
+  </p>
+  <table cellspacing="0">
+    <tr>
+      <th>Creation date:</th>
+      <td><%= @project.creation_date %></td>
+    </tr>
+    <tr>
+      <th>Release date:</th>
+      <td><%= @project.release_date %></td>
+    </tr>
+    <tr>
+      <th>Last Release date:</th>
+      <td><%= @project.last_release_date %></td>
+    </tr>
+    <tr>
+      <th>Last_Release Time:</th>
+      <td><%= @project.last_release_time %></td>
+    </tr>
+    <tr>
+      <th>Subsystems:</th>
+      <td><%= @project.subsystems %></td>
+    </tr>
+    <tr>
+      <th>Last release version:</th>
+      <td><%= @project.last_release_version %></td>
+    </tr>
+    <tr>
+      <th>Last release description:</th>
+      <td><%= @project.last_release_description %></td>
+    </tr>
+    <tr>
+      <th>Last release deployer:</th>
+      <td><%= @project.last_release_deployer %></td>
+    </tr>
+    <tr>
+      <th>Next release version:</th>
+      <td><%= @project.next_release_version %></td>
+    </tr>
+    <tr>
+      <th>Next release date:</th>
+      <td><%= @project.next_release_date %></td>
+    </tr>
+    <tr>
+      <th>Next release time:</th>
+      <td><%= @project.next_release_time %></td>
+    </tr>
+    <tr>
+      <th>Next release version:</th>
+      <td><%= @project.next_release_version %></td>
+    </tr>
+    <tr>
+      <th>Next release description:</th>
+      <td><%= @project.next_release_description %></td>
+    </tr>
+    <tr>
+      <th>Next release deployer:</th>
+      <td><%= @project.next_release_deployer %></td>
+    </tr>
+    <tr>
+      <th>Documentation:</th>
+      <td><%= @project.documentation %></td>
+    </tr>
+    <tr>
+      <th>Repo location:</th>
+      <td><%= @project.repo_location %></td>
+    </tr>
+    <tr>
+      <th>Hosting:</th>
+      <td><%= @project.hosting %></td>
+    </tr>
+  </table>
+</article>
+
+<%= link_to "All Projects", projects_path %>

@@ -1,2 +1,27 @@
-<h1>3 Projects</h1>
+<h1><%= @projects.size %> Projects</h1>
 
+<% @projects.each do |project| %>
+  <article>
+    <header>
+      <h2><%= link_to project.name, project %>(<%= project.short_name %>)</h2>
+      <p>[<%= project.code_name %>]</p>
+    </header>
+    <p>
+      <%= truncate(project.description, length:40, separator: ' ') %>
+    </p>
+    <table cellspacing="0">
+      <tr>
+        <th>Creation date:</th>
+        <td><%= project.creation_date %></td>
+      </tr>
+      <tr>
+        <th>Release date:</th>
+        <td><%= project.release_date %></td>
+      </tr>
+      <tr>
+        <th>Last Release date:</th>
+        <td><%= project.last_release_date %></td>
+      </tr>
+    </table>
+  </article>
+<% end %>
