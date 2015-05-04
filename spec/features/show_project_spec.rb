@@ -37,7 +37,7 @@ describe "Viewing project" do
   end
   
   it "shows 'Released' if the release_date is present" do
-    project = Project.create(project_attributes(release_date: nil))
+    project = Project.create(project_attributes(release_date: '2014-12-30'))
 
     visit project_url(project)
 
