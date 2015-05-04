@@ -1,7 +1,7 @@
 <article>
   <header>
     <h1><%= @project.name %>(<%= @project.short_name %>)</h1>
-    <h2>[<%= @project.code_name %>]</h2>
+    <h2>[<%= @project.code_name %>][<%= released(@project) %>]</h2>
   </header>
   <p>
     <%= @project.description %>

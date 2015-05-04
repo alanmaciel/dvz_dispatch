@@ -27,4 +27,20 @@ describe "Viewing project" do
     expect(page).to have_text(project.repo_location)
     expect(page).to have_text(project.hosting)
   end
+  
+  it "shows 'Not Released yet' if the release_date is not present" do
+    project = Project.create(project_attributes(release_date: nil))
+
+    visit project_url(project)
+
+    expect(page).to have_text("Not Released yet")
+  end
+  
+  it "shows 'Released' if the release_date is present" do
+    project = Project.create(project_attributes(release_date: nil))
+
+    visit project_url(project)
+
+    expect(page).to have_text("Released")
+  end
 end
