@@ -1,0 +1,73 @@
+<%= form_for @project do |f| %>
+  <p>
+    <%= f.label :name %><br />
+    <%= f.text_field :name, autofocus: true  %>
+  </p>
+  <p>
+    <%= f.label :short_name %><br />
+    <%= f.text_field :short_name %>
+  </p>
+  <p>
+    <%= f.label :code_name %><br />
+    <%= f.text_field :code_name %>
+  </p>
+  <p>
+    <%= f.label :creation_date %><br />
+    <%= f.date_field :creation_date %>
+  </p>
+  <p>
+    <%= f.label :release_date %><br />
+    <%= f.date_field :release_date %>
+  </p>
+  <p>
+    <%= f.label :description %><br />
+    <%= f.text_area :description, cols: 20, rows: 3 %>
+  </p>
+  <p>
+    <%= f.label :subsystems %><br />
+    <%= f.text_area :subsystems, cols: 20, rows: 3 %>
+  </p>
+  <p>
+    <%= f.label :last_release_date %><br />
+    <%= f.date_field :last_release_date %>
+  </p>
+  <p>
+    <%= f.label :last_release_description %><br />
+    <%= f.text_area :last_release_description %>
+  </p>
+  <p>
+    <%= f.label :last_release_time %><br />
+    <%= f.time_field :last_release_time %>
+  </p>
+  <p>
+    <%= f.label :last_release_version %><br />
+    <%= f.text_field :last_release_version %>
+  </p>
+  <p>
+    <%= f.label :last_release_deployer %><br />
+    <%= f.text_field :last_release_deployer %>
+  </p>
+  <p>
+    <%= f.label :next_release_date %><br />
+    <%= f.date_field :next_release_date %>
+  </p>
+  <p>
+    <%= f.label :next_release_time %><br />
+    <%= f.time_field :next_release_time %>
+  </p>
+  <p>
+    <%= f.label :next_release_version %><br />
+    <%= f.text_field :next_release_version %>
+  </p>
+  <p>
+    <%= f.label :next_release_description %><br />
+    <%= f.text_area :next_release_description, cols: 20, rows: 4 %>
+  </p>
+  <p>
+    <%= f.label :next_release_deployer %><br />
+    <%= f.text_field :next_release_deployer %>
+  </p>
+  <p>
+    <%= f.submit %>
+  </p>
+<% end %>
