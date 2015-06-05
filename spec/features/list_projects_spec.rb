@@ -67,4 +67,12 @@ describe 'Viewing the list of projects' do
     expect(page).to have_text(project2.name)
     expect(page).to have_text(project3.name)
   end
+
+  it "does not show a project that hasn't yet been released" do
+    project = Project.create(project_attributes(release_date: 1.month.from_now))
+
+    visit projects_path
+
+    expect(page).not_to have_text(project.name)
+  end
 end
