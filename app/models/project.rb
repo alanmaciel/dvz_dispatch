@@ -6,4 +6,8 @@ class Project < ActiveRecord::Base
       true
     end
   end
+ 
+  def self.released
+    where("release_date <= ?", Time.now).order("release_date desc")
+  end
 end
