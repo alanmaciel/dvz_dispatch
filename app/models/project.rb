@@ -1,10 +1,6 @@
 class Project < ActiveRecord::Base
   def released?
-    if self.release_date.nil?
-      false
-    else
-      true
-    end
+    !self.release_date.nil?
   end
  
   def self.released
